@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+}
+.section-work{
+    position: sticky;
+    background: #010615;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.section-work .box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height:300px;
+    margin: 15px;
+    transition: 0.5s;
+    background:#060c21;
+
+}
+.section-work .box:hover{
+    height:400px;
+}
+.section-work .box .imgbx{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.section-work .box .imgbx img{
+    width: 100%;
+    height: 300px;
+    opacity: 0.1;
+    transition:0.5s;
+    
+}
+.section-work .box:hover .imgbx img{
+    opacity: 1;
+}
+.section-work .box:before{
+    content: "";
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    right:-2px;
+    bottom: -2px;
+    background:#fff;
+    z-index: -1;
+}
+.section-work .box:after{
+    content: "";
+    position: absolute; 
+    top:-2px;
+    left:-2px;
+    right:-2px;
+    bottom: -2px;
+    background:#fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+.section-work .box:after,
+.section-work .box:before{
+    background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+}
+.section-work .box:nth-child(2):after,
+.section-work .box:nth-child(2):before{
+    background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+}
+.section-work .box:nth-child(3):after,
+.section-work .box:nth-child(3):before{
+    background: linear-gradient(235deg,#772aff,#010615,#2196f3);
+}
+.section-work .box .content{
+    position:absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 90px;
+    background: rgba(0,0,0,0.4);
+
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5;
+}
+.section-work .box:hover .content{
+    opacity: 1;
+}
+.section-work .box .content h2{
+    margin-top: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+.section-work .box .content p{
+     margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 200;
+}
